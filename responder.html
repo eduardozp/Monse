@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- todoreal.com -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta Especial</title>
+    <style>
+        body {
+            background-color: #404040;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+		
+		h5 {
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #si-button {
+            background-color: green;
+            color: white;
+        }
+
+        #no-button {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: red;">❤️¡MONSE...! ❤️</h1>
+    <h5> No sé lo que espero de ti pero, es algo parecido a un milagro.<br/><br/>	
+		
+	Pero si no te pido que seas mía ahora me arrepentiré durante el resto de mi vida porque sé en lo más profundo de mi ser que en algún momento uno de los dos o los dos, lo hemos pensado y ninguno se atrevió a mencionarlo. Por temor a quedar mal ante el otro.<br/><br/>
+	
+	Dadéjame decirte algo que llevo clavado en el pecho: En mi mente, siempre te estoy mordiendo los labios.<br/><br/>
+
+	Quiero saber qué le causa placer a una hermosa mujer como tú.<br/>
+	Quisiera aprender a satisfacerte.<br/>
+	Quiero aprender sobre ti.<br/>
+	Quiero que liberes a tus demonios que llevas dentro, de preferencia en mi cama.<br/><br/>
+	
+	¿Me permitirías hacerlo?<br/>
+	¿Me dejarías intentarlo?<br/><br/>
+	</h5>
+    <div class="button-container">
+        <button class="button" id="si-button" onclick="respuesta('si')">Claro que ¡Sí!</button>
+        <button class="button" id="no-button" onclick="respuesta('no')">¡No!</button>
+    </div>
+
+    <script>
+        function respuesta(respuesta) {
+            if (respuesta === 'si') {
+                alert(' ❤️¿Y si te escribo versos con mi lengua & hago poesía con mis dedos en ti? ❤️');
+            } else {
+                alert(' No te creo... Elige otro opción... jajajajaja');
+            }
+        }
+        setInterval(moverBotonNoAleatoriamente, 500);
+
+        function moverBotonNoAleatoriamente() {
+            var botonNo = document.getElementById('no-button');
+            var maxX = window.innerWidth - botonNo.offsetWidth;
+            var maxY = window.innerHeight - botonNo.offsetHeight;
+
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+
+            botonNo.style.position = 'absolute';
+            botonNo.style.left = randomX + 'px';
+            botonNo.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
